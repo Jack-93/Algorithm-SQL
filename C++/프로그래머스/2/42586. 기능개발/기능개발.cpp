@@ -8,8 +8,8 @@ using namespace std;
 
 vector<int> solution(vector<int> progresses, vector<int> speeds) {
     vector<int> answer;
+
     queue <int> q;
-        
     for (int i = 0; i < progresses.size(); ++i)
         q.push(ceil((double)(100 - progresses[i]) / (double)speeds[i]));
 
