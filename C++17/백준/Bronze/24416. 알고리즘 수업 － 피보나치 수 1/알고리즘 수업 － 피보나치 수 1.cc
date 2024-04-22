@@ -4,7 +4,7 @@ using namespace std;
 
 int count1 = 0;
 int count2 = 0;
-
+// 함수 호출 시 count
 int fib(int n)
 {
     count1++;
@@ -13,6 +13,7 @@ int fib(int n)
     else
         return (fib(n - 1) + fib(n - 2));
 }
+// for문 반복 시 count
 int fibonacci(int n)
 {
     int arr[41];
