@@ -1,24 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main()
 {
     int n;
-    long long int num[90] = {0};
-    num[1] = 1;
     cin >> n;
+    long long int fib[91] = {
+        0,
+    };
+    fib[0] = 0;
+    fib[1] = 1;
 
-    if (n <= 1)
+    for (int i = 2; i <= n; i++)
     {
-        cout << num[n] << endl;
+        fib[i] = fib[i - 2] + fib[i - 1];
     }
-    else
-    {
-        for (int i = 2; i <= n; i++)
-        {
-            num[i] = num[i - 1] + num[i - 2];
-        }
-        cout << num[n] << endl;
-    }
+    cout << fib[n] << "\n";
+    return 0;
 }
